@@ -1,6 +1,5 @@
 /**
- * Events Page JavaScript
- * Handles loading, filtering, and displaying events
+ * Events Page JavaScript - Editorial Style
  */
 
 // Global events data
@@ -40,12 +39,11 @@ async function loadEvents() {
         filteredEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
         
         renderEvents(filteredEvents);
-        renderFeaturedEvents();
         
     } catch (error) {
         console.error('Error loading events:', error);
         eventsGrid.innerHTML = `
-            <div class="no-events">
+            <div class="no-events-editorial" style="grid-column: 1/-1;">
                 <div class="no-events-icon">⚠️</div>
                 <h3>Could not load events</h3>
                 <p>Please try refreshing the page.</p>
@@ -73,7 +71,7 @@ function renderEvents(events) {
 }
 
 /**
- * Create HTML for an event card
+ * Create HTML for an event card - Editorial Style
  */
 function createEventCard(event) {
     const date = new Date(event.date);
@@ -85,40 +83,30 @@ function createEventCard(event) {
     });
     
     const isSoldOut = event.status === 'sold-out' || event.spotsLeft === 0;
-    const spotsClass = event.spotsLeft <= 3 ? 'low' : '';
     
     return `
-        <article class="event-card" data-id="${event.id}">
+        <article class="event-card-editorial" data-id="${event.id}">
             <div class="event-card-image">
-                <img src="${event.image || 'https://via.placeholder.com/400x200?text=Event'}" alt="${event.title}">
+                <img src="${event.image || 'https://via.placeholder.com/600x800?text=Event'}" alt="${event.title}">
                 <div class="event-card-badges">
-                    ${event.featured ? '<span class="event-badge featured">Featured</span>' : ''}
-                    ${isSoldOut ? '<span class="event-badge sold-out">Sold Out</span>' : ''}
-                    <span class="event-badge tag">${event.tags[0] || 'Event'}</span>
+                    ${event.featured ? '<span class="event-badge-editorial featured">Featured</span>' : ''}
+                    ${isSoldOut ? '<span class="event-badge-editorial sold-out">Sold Out</span>' : `<span class="event-badge-editorial">${event.tags[0] || 'Event'}</span>`}
                 </div>
             </div>
             <div class="event-card-content">
-                <div class="event-card-date">
-                    📅 ${dateStr}
-                </div>
+                <div class="event-card-date">${dateStr}</div>
                 <h3 class="event-card-title">${event.title}</h3>
                 <p class="event-card-description">${event.shortDescription || event.description.substring(0, 120)}...</p>
                 <div class="event-card-meta">
-                    <div class="event-card-meta-item">
-                        🕐 ${event.time} · ${event.duration}
-                    </div>
-                    <div class="event-card-meta-item">
-                        📍 ${event.location.split(',')[0]}
-                    </div>
-                    <div class="event-card-meta-item">
-                        🎫 ${isSoldOut ? 'Sold Out' : event.spotsLeft + ' spots left'}
-                    </div>
+                    <span>⏱ ${event.time} · ${event.duration}</span>
+                    <span>📍 ${event.location.split(',')[0]}</span>
+                    <span>${isSoldOut ? 'Sold Out' : `${event.spotsLeft} spots left`}</span>
                 </div>
                 <div class="event-card-footer">
                     <div class="event-card-price">
                         ${event.currency}${event.price}
                     </div>
-                    <a href="event-detail.html?id=${event.id}" class="btn-primary">
+                    <a href="event-detail.html?id=${event.id}" class="btn-outline">
                         ${isSoldOut ? 'Join Waitlist' : 'View Details'}
                     </a>
                 </div>
@@ -128,71 +116,60 @@ function createEventCard(event) {
 }
 
 /**
- * Render featured events
- */
-function renderFeaturedEvents() {
-    const featuredGrid = document.getElementById('featuredEventsGrid');
-    const featuredSection = document.getElementById('featuredEvents');
-    
-    const featuredEvents = allEvents.filter(e => e.featured && e.status === 'active');
-    
-    if (featuredEvents.length === 0) {
-        featuredSection.style.display = 'none';
-        return;
-    }
-    
-    featuredGrid.innerHTML = featuredEvents.map(event => createEventCard(event)).join('');
-}
-
-/**
  * Setup filter event listeners
  */
 function setupFilters() {
-    const typeFilter = document.getElementById('eventType');
-    const monthFilter = document.getElementById('eventMonth');
+    const filterButtons = document.querySelectorAll('.filter-btn');
     const searchInput = document.getElementById('eventSearch');
     
-    const applyFilters = () => {
-        let filtered = [...allEvents];
-        
-        // Filter by type/tag
-        if (typeFilter.value !== 'all') {
-            filtered = filtered.filter(e => 
-                e.tags.includes(typeFilter.value) || 
-                e.status === typeFilter.value
-            );
-        }
-        
-        // Filter by month
-        if (monthFilter.value !== 'all') {
-            filtered = filtered.filter(e => {
-                const eventMonth = new Date(e.date).getMonth() + 1;
-                return eventMonth === parseInt(monthFilter.value);
-            });
-        }
-        
-        // Filter by search
-        if (searchInput.value.trim()) {
-            const search = searchInput.value.toLowerCase();
-            filtered = filtered.filter(e => 
-                e.title.toLowerCase().includes(search) ||
-                e.description.toLowerCase().includes(search) ||
-                e.location.toLowerCase().includes(search)
-            );
-        }
-        
-        // Only show active/sold out events
-        filtered = filtered.filter(e => e.status === 'active' || e.status === 'sold-out');
-        
-        // Sort by date
-        filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
-        
-        renderEvents(filtered);
-    };
+    // Filter buttons
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Update active state
+            filterButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filter = this.dataset.filter;
+            applyFilters(filter, searchInput.value.toLowerCase());
+        });
+    });
     
-    typeFilter?.addEventListener('change', applyFilters);
-    monthFilter?.addEventListener('change', applyFilters);
-    searchInput?.addEventListener('input', debounce(applyFilters, 300));
+    // Search input
+    searchInput?.addEventListener('input', debounce(() => {
+        const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
+        applyFilters(activeFilter, searchInput.value.toLowerCase());
+    }, 300));
+}
+
+/**
+ * Apply filters
+ */
+function applyFilters(filterType, searchTerm) {
+    let filtered = [...allEvents];
+    
+    // Filter by type/tag
+    if (filterType !== 'all') {
+        filtered = filtered.filter(e => 
+            e.tags.includes(filterType) || e.status === filterType
+        );
+    }
+    
+    // Filter by search
+    if (searchTerm.trim()) {
+        filtered = filtered.filter(e => 
+            e.title.toLowerCase().includes(searchTerm) ||
+            e.description.toLowerCase().includes(searchTerm) ||
+            e.location.toLowerCase().includes(searchTerm)
+        );
+    }
+    
+    // Only show active/sold out events
+    filtered = filtered.filter(e => e.status === 'active' || e.status === 'sold-out');
+    
+    // Sort by date
+    filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
+    
+    renderEvents(filtered);
 }
 
 /**

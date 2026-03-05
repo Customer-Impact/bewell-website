@@ -1,5 +1,5 @@
 /**
- * Event Detail Page JavaScript
+ * Event Detail Page JavaScript - Editorial Style
  */
 
 // Current event data
@@ -57,7 +57,7 @@ async function loadEventDetails() {
  */
 function showNotFound() {
     document.getElementById('eventLoading').style.display = 'none';
-    document.getElementById('eventNotFound').style.display = 'block';
+    document.getElementById('eventNotFound').style.display = 'flex';
     document.getElementById('eventContent').style.display = 'none';
 }
 
@@ -72,8 +72,8 @@ function renderEventDetails() {
     document.title = `${event.title} | BeWell Events`;
     
     // Update hero section
-    document.getElementById('eventHeroImage').src = event.image || 'https://via.placeholder.com/1200x500?text=Event';
-    document.getElementById('eventHeroImage').alt = event.title;
+    document.getElementById('eventHeroImg').src = event.image || 'https://via.placeholder.com/1200x800?text=Event';
+    document.getElementById('eventHeroImg').alt = event.title;
     document.getElementById('eventTag').textContent = event.tags[0] || 'Event';
     document.getElementById('eventFeatured').style.display = event.featured ? 'inline-block' : 'none';
     document.getElementById('eventTitle').textContent = event.title;
@@ -89,23 +89,23 @@ function renderEventDetails() {
     document.getElementById('eventDate').textContent = dateStr;
     
     document.getElementById('eventTime').textContent = `${formatTime(event.time)} · ${event.duration}`;
-    document.getElementById('eventLocation').textContent = event.location;
     document.getElementById('eventDuration').textContent = event.duration;
+    document.getElementById('eventLocation').textContent = event.location.split(',')[0];
     
     // Update description
     document.getElementById('eventDescription').textContent = event.description;
     
     // Update booking card
     document.getElementById('eventPrice').textContent = `${event.currency}${event.price}`;
-    document.getElementById('eventCapacity').textContent = `${event.capacity} spots`;
+    document.getElementById('eventCapacity').textContent = `${event.capacity} people`;
     
     const isSoldOut = event.status === 'sold-out' || event.spotsLeft === 0;
     const spotsEl = document.getElementById('eventSpots');
-    spotsEl.textContent = isSoldOut ? 'Sold Out' : `${event.spotsLeft} spots left`;
-    spotsEl.className = 'info-value spots-available' + (event.spotsLeft <= 3 && !isSoldOut ? ' low' : '');
+    spotsEl.textContent = isSoldOut ? 'Sold Out' : `${event.spotsLeft} spots available`;
+    spotsEl.style.color = event.spotsLeft <= 3 && !isSoldOut ? '#C4A77D' : '';
     
     // Show/hide booking button vs sold out message
-    const bookingActions = document.querySelector('.booking-actions');
+    const bookingActions = document.getElementById('bookingActions');
     const soldOutMessage = document.getElementById('soldOutMessage');
     
     if (isSoldOut) {
@@ -151,10 +151,10 @@ function loadRelatedEvents(allEvents) {
             e.status === 'active' &&
             e.tags.some(tag => currentEvent.tags.includes(tag))
         )
-        .slice(0, 3);
+        .slice(0, 2);
     
     // If not enough related, add upcoming events
-    if (related.length < 3) {
+    if (related.length < 2) {
         const upcoming = allEvents
             .filter(e => 
                 e.id !== currentEvent.id && 
@@ -162,13 +162,13 @@ function loadRelatedEvents(allEvents) {
                 !related.includes(e)
             )
             .sort((a, b) => new Date(a.date) - new Date(b.date))
-            .slice(0, 3 - related.length);
+            .slice(0, 2 - related.length);
         
         related.push(...upcoming);
     }
     
     if (related.length === 0) {
-        document.querySelector('.related-events').style.display = 'none';
+        document.querySelector('.related-events-editorial').style.display = 'none';
         return;
     }
     
@@ -182,21 +182,21 @@ function createRelatedEventCard(event) {
     const date = new Date(event.date);
     const dateStr = date.toLocaleDateString('en-US', { 
         month: 'short', 
-        day: 'numeric' 
+        day: 'numeric'
     });
     
     return `
-        <article class="event-card">
+        <article class="event-card-editorial">
             <div class="event-card-image">
-                <img src="${event.image || 'https://via.placeholder.com/400x200?text=Event'}" alt="${event.title}">
+                <img src="${event.image || 'https://via.placeholder.com/600x800?text=Event'}" alt="${event.title}">
             </div>
             <div class="event-card-content">
-                <div class="event-card-date">📅 ${dateStr}</div>
+                <div class="event-card-date">${dateStr} · ${event.time}</div>
                 <h3 class="event-card-title">${event.title}</h3>
                 <p class="event-card-description">${event.shortDescription || event.description.substring(0, 100)}...</p>
                 <div class="event-card-footer">
                     <div class="event-card-price">${event.currency}${event.price}</div>
-                    <a href="event-detail.html?id=${event.id}" class="btn-primary">View</a>
+                    <a href="event-detail.html?id=${event.id}" class="btn-outline">View</a>
                 </div>
             </div>
         </article>
@@ -281,7 +281,7 @@ function handleBooking(e) {
     closeBookingModal();
     
     // Show success message
-    showToast('Booking confirmed! Check your email for details.');
+    showToast('Reservation confirmed! Check your email for details.');
     
     // Reset form
     e.target.reset();
@@ -322,14 +322,6 @@ function shareOnTwitter() {
 }
 
 /**
- * Share on LinkedIn
- */
-function shareOnLinkedIn() {
-    const url = encodeURIComponent(window.location.href);
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'width=600,height=400');
-}
-
-/**
  * Copy link to clipboard
  */
 function copyLink() {
@@ -364,10 +356,10 @@ function showToast(message, type = 'success') {
                 bottom: 30px;
                 left: 50%;
                 transform: translateX(-50%) translateY(100px);
-                background: #333;
-                color: white;
+                background: var(--color-charcoal);
+                color: var(--color-warm-white);
                 padding: 16px 28px;
-                border-radius: 50px;
+                border-radius: 0;
                 display: flex;
                 align-items: center;
                 gap: 12px;
@@ -381,8 +373,7 @@ function showToast(message, type = 'success') {
                 transform: translateX(-50%) translateY(0);
                 opacity: 1;
             }
-            .toast-success { background: #0d7377; }
-            .toast-error { background: #ff6b6b; }
+            .toast-error { background: #C4A77D; }
             .toast-icon { font-size: 1.2rem; }
         `;
         document.head.appendChild(styles);
