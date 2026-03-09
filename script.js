@@ -34,22 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbar = document.querySelector('.navbar');
     let lastScroll = 0;
 
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 50) {
-            navbar.classList.add('scrolled');
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.08)';
-        } else {
-            navbar.classList.remove('scrolled');
-            navbar.style.boxShadow = 'none';
-        }
-
-        lastScroll = currentScroll;
-    });
-
-    // Smooth transition for navbar
-    navbar.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            navbar.classList.toggle('scrolled', currentScroll > 50);
+            lastScroll = currentScroll;
+        });
+    }
 
     // ========================================
     // Smooth Scroll for Anchor Links
@@ -60,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const target = document.querySelector(this.getAttribute('href'));
             
             if (target) {
-                const navbarHeight = navbar.offsetHeight;
+                const navbarHeight = navbar ? navbar.offsetHeight : 0;
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
                 
                 window.scrollTo({
@@ -128,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simulate form submission
             const submitBtn = contactForm.querySelector('button[type="submit"]');
+            if (!submitBtn) return;
             const originalText = submitBtn.textContent;
             
             // Show loading state

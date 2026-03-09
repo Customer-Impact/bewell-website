@@ -6,12 +6,12 @@
     <title>BeWell | Breathwork & Ice Bath with Terry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="editorial">
+<body>
     <!-- Navigation -->
-    <nav class="navbar editorial-nav">
+    <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">
                 <div class="logo-wordmark">
@@ -25,7 +25,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="#training">Training</a></li>
-                <li><a href="https://wa.me/35679252144" target="_blank" class="nav-cta">Book via WhatsApp</a></li>
+                <li><a href="https://wa.me/35679252144" target="_blank" class="nav-cta">Book a Session</a></li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span>
@@ -38,79 +38,92 @@
     <!-- Hero Section -->
     <section class="hero-editorial">
         <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1920" alt="Mediterranean sea">
+            <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1920" alt="Calm Mediterranean sea at golden hour" fetchpriority="high">
             <div class="hero-overlay"></div>
         </div>
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-content-editorial">
                 <h1 class="hero-title-editorial">
-                    <span class="line">Reset.</span>
-                    <span class="line">Reconnect.</span>
-                    <span class="line accent">Return home to yourself.</span>
+                    <span class="hero-line-main">Reset. Reconnect.</span>
+                    <span class="hero-line-script">Return home to yourself.</span>
                 </h1>
                 <p class="hero-subtitle">
                     Immersive breathwork and cold exposure experiences in Malta.
                     A safe space to decompress, regulate your nervous system, and reconnect with who you are.
                 </p>
                 <div class="hero-cta-editorial">
-                    <a href="https://wa.me/35679252144" target="_blank" class="btn-sage btn-large">Book via WhatsApp</a>
-                    <a href="#practice" class="btn-text">Explore Practices →</a>
+                    <a href="https://wa.me/35679252144" target="_blank" class="btn-cta-primary btn-cta-hero">Book a Session</a>
+                </div>
+                <div class="scroll-indicator-editorial">
+                    <div class="scroll-line"></div>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator-editorial">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
+    </section>
+
+    <!-- Trust / Category Bar -->
+    <section class="trust-bar">
+        <div class="trust-bar-inner">
+            <a href="#practice">Breathwork</a>
+            <a href="#practice">Yoga</a>
+            <a href="#practice">Meditation</a>
+            <a href="#practice">Ice Bath</a>
+            <a href="#practice">Cold Exposure</a>
+            <a href="#practice">Wim Hof Method</a>
         </div>
     </section>
 
-    <!-- Marquee Section -->
-    <section class="marquee-section">
-        <div class="marquee-container">
-            <div class="marquee-content">
-                <span>Breathwork</span>
-                <span class="marquee-dot">◈</span>
-                <span>Ice Bath</span>
-                <span class="marquee-dot">◈</span>
-                <span>Cold Exposure</span>
-                <span class="marquee-dot">◈</span>
-                <span>Wim Hof Method</span>
-                <span class="marquee-dot">◈</span>
-                <span>Breathwork</span>
-                <span class="marquee-dot">◈</span>
-                <span>Ice Bath</span>
-                <span class="marquee-dot">◈</span>
-                <span>Cold Exposure</span>
-                <span class="marquee-dot">◈</span>
-                <span>Wim Hof Method</span>
-                <span class="marquee-dot">◈</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Experience Section -->
+    <!-- Featured Experience / Intro Section -->
     <section class="featured-experience" id="practice">
         <div class="container">
             <div class="featured-grid">
                 <div class="featured-image">
-                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800" alt="Breathwork session">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=800" alt="Group breathwork session outdoors" loading="lazy">
                     <div class="featured-caption">
                         <span>Guided sessions in nature</span>
                     </div>
                 </div>
                 <div class="featured-content">
-                    <span class="section-label">The Experience</span>
+                    <span class="section-accent"></span>
                     <h2>Breathwork & ice bath sessions crafted for transformation</h2>
-                    <p class="lead">
+                    <p>
                         Each session is designed to guide you into deeper connection with your body, 
-                        release stored tension, and awaken your capacity for resilience.
+                        release stored tension, and awaken your capacity for resilience. Through guided 
+                        breathing techniques and controlled cold exposure, you'll learn to regulate your 
+                        nervous system, reduce stress, and access states of clarity and vitality.
+                    </p>
+                    <a href="events.html" class="btn-cta-secondary">Explore Sessions →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Terry Section - Moved up for trust -->
+    <section class="about-editorial" id="about">
+        <div class="container">
+            <div class="about-grid-editorial">
+                <div class="about-portrait">
+                    <img src="terry.webp" alt="Terry - Certified breathwork and cold exposure facilitator" loading="lazy">
+                </div>
+                <div class="about-bio">
+                    <span class="section-label-about">Your Guide</span>
+                    <h2>Meet Terry</h2>
+                    <p>
+                        Certified Wim Hof Method instructor and breathwork facilitator 
+                        with over a decade of experience guiding transformations.
                     </p>
                     <p>
-                        Through guided breathing techniques and controlled cold exposure, you'll learn 
-                        to regulate your nervous system, reduce stress, and access states of clarity 
-                        and vitality that ripple through every aspect of your life.
+                        Terry's journey began with her own healing crisis, leading her to
+                        explore the power of breath and cold. Today, she shares these ancient
+                        practices with a modern approach, helping hundreds find their way
+                        back to vitality and inner peace.
                     </p>
-                    <a href="events.html" class="btn-outline">Explore Sessions</a>
+                    <div class="credentials-editorial">
+                        <span>Certified Wim Hof Method Instructor</span>
+                        <span>Trauma-Informed Breathwork Facilitator</span>
+                        <span>Cold Exposure Specialist</span>
+                    </div>
+                    <a href="#contact" class="link-arrow-about">Learn more about Terry →</a>
                 </div>
             </div>
         </div>
@@ -119,75 +132,67 @@
     <!-- Practice Types Section -->
     <section class="practice-types">
         <div class="container">
-            <div class="section-header-editorial">
-                <span class="section-label">Offerings</span>
-                <h2>Breathwork for every state of being</h2>
-            </div>
-            <div class="practice-grid">
-                <div class="practice-card">
+            <h2 class="practice-types-heading">Practices for every stage of wellbeing</h2>
+            <div class="practice-grid practice-gallery">
+                <a href="events.html" class="practice-card" data-label="Breathwork">
                     <div class="practice-image">
-                        <img src="https://images.unsplash.com/photo-1474418397713-7ede21d49118?w=400" alt="Breathwork">
+                        <img src="https://images.unsplash.com/photo-1474418397713-7ede21d49118?w=400" alt="Breathwork practice" loading="lazy">
                     </div>
-                    <h3>Breath</h3>
-                    <p>Guided breathwork techniques to regulate your nervous system, release tension, and access deep clarity.</p>
-                    <a href="events.html" class="link-arrow">Explore →</a>
-                </div>
-                <div class="practice-card">
+                    <span class="practice-card-label">Breathwork</span>
+                </a>
+                <a href="events.html" class="practice-card" data-label="Cold">
                     <div class="practice-image">
-                        <img src="cold.jpeg" alt="Ice bathing activity" style="object-position: top;">
+                        <img src="cold.jpeg" alt="Ice bathing and cold exposure" loading="lazy" style="object-position: top;">
                     </div>
-                    <h3>Cold</h3>
-                    <p>Controlled cold exposure and ice bath sessions to build resilience, boost energy, and strengthen immunity.</p>
-                    <a href="events.html" class="link-arrow">Explore →</a>
-                </div>
-                <div class="practice-card">
+                    <span class="practice-card-label">Cold</span>
+                </a>
+                <a href="events.html" class="practice-card" data-label="Body">
                     <div class="practice-image">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400" alt="Body">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400" alt="Somatic body practices" loading="lazy">
                     </div>
-                    <h3>Body</h3>
-                    <p>Somatic practices that reconnect you to your body, release stored stress, and restore physical vitality.</p>
-                    <a href="events.html" class="link-arrow">Explore →</a>
-                </div>
-                <div class="practice-card">
+                    <span class="practice-card-label">Body</span>
+                </a>
+                <a href="events.html" class="practice-card" data-label="Mind">
                     <div class="practice-image">
-                        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=400" alt="Mind">
+                        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=400" alt="Mindfulness and meditation" loading="lazy">
                     </div>
-                    <h3>Mind</h3>
-                    <p>Mindfulness and mental conditioning tools to cultivate inner stillness, focus, and emotional balance.</p>
-                    <a href="events.html" class="link-arrow">Explore →</a>
-                </div>
+                    <span class="practice-card-label">Mind</span>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Science Section -->
     <section class="science-section">
-        <div class="science-bg">
-            <img src="https://images.unsplash.com/photo-1518173946687-a4c036bc3c95?w=1920" alt="Nature">
-            <div class="science-overlay"></div>
-        </div>
         <div class="container">
             <div class="science-content">
-                <span class="section-label light">The Science</span>
                 <h2>How breathwork transforms the nervous system</h2>
                 <div class="science-grid">
                     <div class="science-item">
-                        <span class="science-number">01</span>
+                        <div class="science-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 36c-2-4-4-10-4-16 0-6 4-12 10-12s10 6 10 12c0 6-2 12-4 16"/><path d="M24 8v4M20 14h8M22 20h4"/></svg>
+                        </div>
                         <h4>Parasympathetic Activation</h4>
                         <p>Conscious breathing shifts your body from fight-or-flight into rest-and-digest mode.</p>
                     </div>
                     <div class="science-item">
-                        <span class="science-number">02</span>
+                        <div class="science-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 24c0-4 4-8 8-8 2 0 4 1 6 3"/><path d="M36 24c0-4-4-8-8-8-2 0-4 1-6 3"/><path d="M8 28v12c0 2 2 4 4 4h24c2 0 4-2 4-4V28"/><path d="M16 20v4M24 18v6M32 20v4"/></svg>
+                        </div>
                         <h4>Enhanced Oxygenation</h4>
                         <p>Optimized breathing patterns increase oxygen delivery to tissues and brain.</p>
                     </div>
                     <div class="science-item">
-                        <span class="science-number">03</span>
+                        <div class="science-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 36c-8 0-14-6-14-14 0-4 2-8 4-10 2-2 4-2 6 0 2 2 4 6 4 10s-2 8-4 10c-2 2-4 4-6 4z"/><path d="M24 28c4 0 8-4 8-8s-4-8-8-8"/></svg>
+                        </div>
                         <h4>Stress Hormone Regulation</h4>
                         <p>Regular practice reduces cortisol levels and promotes hormonal balance.</p>
                     </div>
                     <div class="science-item">
-                        <span class="science-number">04</span>
+                        <div class="science-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="14"/><path d="M24 14v6M24 28v6M14 24h6M28 24h6"/><path d="M18 18l4 4M26 26l4 4M26 18l-4 4M18 26l-4 4"/></svg>
+                        </div>
                         <h4>Cold Adaptation</h4>
                         <p>Controlled cold exposure builds resilience and strengthens immune function.</p>
                     </div>
@@ -213,10 +218,10 @@
                         <li>All equipment provided</li>
                         <li>Safe, supportive environment</li>
                     </ul>
-                    <a href="events.html" class="btn-primary">View Schedule</a>
+                    <a href="events.html" class="btn-cta-primary">Book a Session</a>
                 </div>
                 <div class="weekly-image">
-                    <img src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=800" alt="Ice bath session">
+                    <img src="https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=800" alt="Group ice bath session in nature" loading="lazy">
                     <div class="weekly-badge">
                         <span class="badge-day">Every</span>
                         <span class="badge-time">Saturday</span>
@@ -232,7 +237,7 @@
         <div class="container">
             <div class="training-grid">
                 <div class="training-image">
-                    <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800" alt="Training">
+                    <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800" alt="Breathwork facilitator training session" loading="lazy">
                 </div>
                 <div class="training-content">
                     <span class="section-label">Training</span>
@@ -255,49 +260,21 @@
                             <p>Build your practice with confidence</p>
                         </div>
                     </div>
-                    <a href="#contact" class="btn-outline">Inquire About Training</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Terry Section -->
-    <section class="about-editorial" id="about">
-        <div class="container">
-            <div class="about-grid-editorial">
-                <div class="about-portrait">
-                    <img src="terry.webp" alt="Terry">
-                </div>
-                <div class="about-bio">
-                    <span class="section-label">Your Guide</span>
-                    <h2>Meet Terry</h2>
-                    <p class="lead">
-                        Certified Wim Hof Method instructor and breathwork facilitator 
-                        with over a decade of experience guiding transformations.
-                    </p>
-                    <p>
-                        Terry's journey began with her own healing crisis, leading her to
-                        explore the power of breath and cold. Today, she shares these ancient
-                        practices with a modern approach, helping hundreds find their way
-                        back to vitality and inner peace.
-                    </p>
-                    <div class="credentials-editorial">
-                        <span>Certified Wim Hof Method Instructor</span>
-                        <span>Trauma-Informed Breathwork Facilitator</span>
-                        <span>Cold Exposure Specialist</span>
-                    </div>
+                    <a href="#contact" class="btn-cta-secondary">Inquire About Training →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
+
     <section class="testimonials-editorial">
         <div class="container">
             <div class="section-header-editorial centered">
                 <span class="section-label">Reflections</span>
                 <h2>Session reflections</h2>
             </div>
+            
             <div class="testimonials-grid-editorial">
                 <div class="testimonial-card-editorial">
                     <blockquote>
@@ -322,58 +299,25 @@
 
     <!-- Contact Section -->
     <section class="contact-editorial" id="contact">
-        <div class="container">
-            <div class="contact-grid-editorial">
-                <div class="contact-info-editorial">
-                    <span class="section-label">Begin</span>
-                    <h2>Start your transformation</h2>
-                    <p class="lead">
-                        Ready to explore the power of your breath? Book a session or 
-                        reach out with questions.
-                    </p>
-                    <div class="contact-details-editorial">
-                        <div class="contact-item">
-                            <span class="contact-label">Book</span>
-                            <a href="https://wa.me/35679252144" target="_blank">WhatsApp</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Instagram</span>
-                            <a href="https://www.instagram.com/bewell_with_terry" target="_blank">@bewell_with_terry</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Location</span>
-                            <span>Malta</span>
-                        </div>
+        <div class="container contact-container">
+            <div class="contact-form-wrapper">
+                <p class="contact-intro">I'd love to hear from you — whether you have a question or you're ready to begin.</p>
+                <form class="contact-form-editorial" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
-                </div>
-                <div class="contact-form-wrapper">
-                    <form class="contact-form-editorial" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="interest">I'm interested in</label>
-                            <select id="interest" name="interest">
-                                <option value="">Select...</option>
-                                <option value="session">Private Session</option>
-                                <option value="group">Group Class</option>
-                                <option value="training">Facilitator Training</option>
-                                <option value="corporate">Corporate Program</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
-                        </div>
-                        <a href="https://wa.me/35679252144" target="_blank" class="btn-sage btn-full" style="text-align:center; text-decoration:none;">Book via WhatsApp</a>
-                        <button type="submit" class="btn-outline btn-full" style="margin-top: 0.75rem;">Send a Message</button>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">What brings you here?</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <a href="https://wa.me/35679252144" target="_blank" class="btn-cta-primary btn-full">Book a Session</a>
+                    <button type="submit" class="btn-cta-secondary btn-full">Send a Message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -386,7 +330,7 @@
                 <p>Subscribe for insights on breathwork, cold exposure, and nervous system regulation.</p>
                 <form class="newsletter-form">
                     <input type="email" placeholder="Your email address" required>
-                    <button type="submit" class="btn-primary">Subscribe</button>
+                    <button type="submit" class="btn-cta-primary">Subscribe</button>
                 </form>
             </div>
         </div>
@@ -397,17 +341,11 @@
         <div class="container">
             <div class="footer-grid-editorial">
                 <div class="footer-brand">
-                    <a href="#" class="logo" style="color: var(--sand-light);">
-                        <div class="logo-wordmark">
-                            <span>BeWell</span>
-                            <span class="with-terry" style="color: var(--sand);">with Terry</span>
-                        </div>
-                        <span class="logo-tagline" style="color: var(--sage-light);">Breath · Cold · Heat · Mind</span>
-                    </a>
-                    <p>Nervous system reset — but make it human.<br>In-person experiences in Malta.</p>
+                    <a href="#" class="footer-logo">BeWell with Terry</a>
+                    <p>Nervous system reset — but make it human. In-person experiences in Malta.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Explore</h4>
+                    <h4>Quick links</h4>
                     <ul>
                         <li><a href="#practice">Practice</a></li>
                         <li><a href="events.html">Events</a></li>
@@ -415,21 +353,20 @@
                         <li><a href="#about">About Terry</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Connect</h4>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
                     <ul>
                         <li><a href="https://wa.me/35679252144" target="_blank">WhatsApp</a></li>
-                        <li><a href="https://www.instagram.com/bewell_with_terry" target="_blank">Instagram</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="https://www.instagram.com/bewell_with_terry" target="_blank" aria-label="Instagram">Instagram</a></li>
+                        <li>Malta</li>
                     </ul>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/bewell_with_terry" target="_blank" aria-label="Instagram">↗</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom-editorial">
                 <p>&copy; 2026 BeWell. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                </div>
             </div>
         </div>
     </footer>
@@ -440,7 +377,7 @@
             <div class="modal-icon">✓</div>
             <h3>Message Sent</h3>
             <p>Thank you for reaching out. I'll respond within 24 hours.</p>
-            <button class="btn-primary" onclick="closeModal()">Close</button>
+            <button class="btn-cta-primary" onclick="closeModal()">Close</button>
         </div>
     </div>
 
