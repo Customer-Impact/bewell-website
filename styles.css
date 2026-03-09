@@ -866,15 +866,15 @@ img {
    Science Section
    ======================================== */
 .science-section {
-    padding: var(--section-padding) 0;
-    background: var(--color-primary-dark);
-    color: var(--color-white);
+    padding: 48px 0;
+    background: #e8f5f3;
+    color: var(--color-dark);
 }
 
 .science-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 48px;
-    color: var(--color-white);
+    font-size: 2rem;
+    margin-bottom: 32px;
+    color: var(--color-dark);
 }
 
 .science-grid {
@@ -884,14 +884,15 @@ img {
 }
 
 .science-item {
-    padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+    border-top: 1px solid rgba(26, 122, 109, 0.2);
 }
 
 .science-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 20px;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 14px;
+    color: var(--color-primary);
 }
 
 .science-icon svg {
@@ -901,15 +902,15 @@ img {
 
 .science-item h4 {
     font-family: var(--font-sans);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    margin-bottom: 12px;
-    color: var(--color-white);
+    margin-bottom: 8px;
+    color: var(--color-dark);
 }
 
 .science-item p {
-    font-size: 0.875rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    color: var(--color-dark-light);
     line-height: 1.7;
 }
 
