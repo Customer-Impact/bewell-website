@@ -746,6 +746,11 @@ img {
     object-fit: cover;
 }
 
+.instagram-embed-wrapper {
+    width: 100%;
+    min-height: 500px;
+}
+
 .weekly-badge {
     position: absolute;
     top: var(--space-md);
