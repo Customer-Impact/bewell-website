@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Body Keeps the Score | BeWell with Terry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            overflow: hidden;
+        }
+        .blog-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .blog-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(27,45,58,0.2) 0%, rgba(27,45,58,0.7) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 48px;
+        }
+        .blog-hero-text {
+            color: #fff;
+            max-width: 760px;
+        }
+        .blog-tag {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-primary-light);
+            margin-bottom: 12px;
+        }
+        .blog-hero-text h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+        .blog-meta {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .blog-body {
+            max-width: 720px;
+            margin: 64px auto;
+            padding: 0 24px;
+        }
+        .blog-body h2 {
+            font-size: 1.75rem;
+            color: var(--color-dark);
+            margin: 2.5rem 0 1rem;
+        }
+        .blog-body p {
+            font-size: 1.05rem;
+            color: var(--color-dark-light);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+        }
+        .blog-body em { font-style: italic; color: var(--color-dark); }
+        .blog-body strong { font-weight: 600; color: var(--color-dark); }
+        .blog-cta-block {
+            background: #e8f5f3;
+            border-left: 4px solid var(--color-primary);
+            padding: 24px 28px;
+            border-radius: 0 8px 8px 0;
+            margin: 3rem 0 0;
+        }
+        .blog-cta-block p {
+            margin: 0 0 16px;
+            color: var(--color-dark);
+            font-style: italic;
+        }
+        .blog-nav {
+            background: var(--color-bg);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--color-sand-dark);
+        }
+        .blog-nav .container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: var(--color-dark-light);
+        }
+        .blog-nav a { color: var(--color-primary); }
+        .blog-nav a:hover { text-decoration: underline; }
+        .blog-nav span { color: var(--color-dark-light); }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-wordmark">
+                    <span>BeWell</span>
+                    <span class="with-terry">with Terry</span>
+                </div>
+                <span class="logo-tagline">Breath · Cold · Body · Mind</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#practice">Practice</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html#training">Training</a></li>
+                <li><a href="https://wa.me/35679252144" target="_blank" class="nav-cta">Book a Session</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="blog-nav" style="margin-top:72px;">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <span>Body</span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="blog-hero">
+        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1400" alt="Body practice">
+        <div class="blog-hero-overlay">
+            <div class="container">
+                <div class="blog-hero-text">
+                    <span class="blog-tag">Body</span>
+                    <h1>The Body Keeps the Score — And It's Been Trying to Talk to You</h1>
+                    <p class="blog-meta">By Terry · 6 min read</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <article class="blog-body">
+        <p>When was the last time you checked in with your body — not because something hurt, but just to ask how it was doing?</p>
+        <p>Not a glance in the mirror. Not a weigh-in. Not the quick mental inventory of <em>did I eat well, did I sleep enough, did I exercise</em>. A real, quiet moment of placing your hand on your chest and simply noticing what's there.</p>
+        <p>If you can't remember, you're not alone. Most of us have learned to treat the body as a machine — something to optimise, push through, or ignore until it forces our attention through pain, exhaustion, or illness.</p>
+        <p>But the body is not a machine. It's your oldest companion. It's been with you for every moment of your life, faithfully carrying you through everything — the grief, the joy, the ordinary Tuesdays. And it has been speaking to you the entire time, in a language most of us were never taught to understand.</p>
+
+        <h2>The Disconnection</h2>
+        <p>We live in a culture that rewards living from the neck up. Thinking, planning, producing, achieving. The body becomes the vehicle that gets the brain to the desk. We sit for hours without moving. We eat while working. We override fatigue with caffeine and override pain with paracetamol and override the quiet voice that says <em>please slow down</em> with one more task, one more email, one more push.</p>
+        <p>Over time, this disconnection compounds. The shoulders carry years of tension. The lower back holds the weight of responsibilities we never set down. The breath stays shallow. The jaw clenches. And eventually, the body's whisper becomes a shout — a frozen shoulder, a herniated disc, chronic fatigue, anxiety that seems to come from nowhere but actually comes from everywhere.</p>
+        <p>The body was never silent. We just stopped listening.</p>
+
+        <h2>Movement as Conversation</h2>
+        <p>When we talk about returning to the body, we don't mean forcing it into a punishing gym routine or perfecting a yoga pose. We mean something much simpler and much more radical: moving with awareness.</p>
+        <p>This can look like yoga, yes — but not the Instagram version with perfect alignment and impossible flexibility. The kind of yoga that starts with lying on the floor and noticing which parts of your back are touching the ground and which aren't. The kind that moves at the speed of your breath, not the speed of the class.</p>
+        <p>It can look like a slow walk where you actually feel your feet connecting with the earth. Like stretching in the morning not because a wellness influencer said to, but because your body asked for it and you listened.</p>
+        <p>It can look like dancing alone in your kitchen. Like swimming in the sea and feeling the water hold your weight. Like sitting still and placing your attention in your hands until they begin to tingle with aliveness.</p>
+        <p>Movement as conversation means the body leads and the mind follows. It means you stop telling your body what it should be able to do and start asking it what it needs.</p>
+
+        <h2>The Wisdom Stored in the Body</h2>
+        <p>There's a growing body of research confirming what bodyworkers and healers have known for centuries: the body stores experience. Not just in the brain's memory centres, but in the fascia, the muscles, the nervous system itself.</p>
+        <p>That tightness in your hip flexors might be connected to years of bracing against stress. The knot between your shoulder blades might carry something you haven't yet found words for. The lump in your throat before a difficult conversation isn't metaphorical — it's your vagus nerve responding to a perceived threat.</p>
+        <p>This isn't about diagnosing yourself or turning every ache into a psychological event. It's about recognising that the body is intelligent. It processes and stores what the mind can't or won't. And when we create space — through gentle movement, through stillness, through breath — some of that stored tension begins to release. Not because we forced it, but because we finally gave it permission.</p>
+
+        <h2>A Practice of Returning</h2>
+        <p>Returning to the body is not a one-time event. It's a daily practice. Some days it takes five minutes. Some days it's simply the moment you pause before getting out of bed and feel the weight of yourself against the mattress.</p>
+        <p>Here are some ways to begin:</p>
+        <p><strong>The morning scan.</strong> Before you reach for your phone, close your eyes and move your attention slowly from the top of your head to the soles of your feet. Don't try to change anything. Just notice. Where is there tension? Where is there ease? What temperature is your skin? This takes two minutes and changes the entire tone of your morning.</p>
+        <p><strong>The midday pause.</strong> Set a gentle alarm for the middle of your day. When it sounds, stop whatever you're doing. Place both feet flat on the floor. Take three slow breaths. Notice your posture — not to correct it, but to witness it. What is your body telling you about how you've been spending the last few hours?</p>
+        <p><strong>The evening release.</strong> Before sleep, lie on your back and place one hand on your heart, one on your belly. Breathe slowly and feel both hands rise and fall. This simple act tells your nervous system that you're safe, that the day is over, that you can let go. It's a way of saying to your body: <em>Thank you. I'm here. We made it through another one.</em></p>
+
+        <h2>The Body as Home</h2>
+        <p>We use the word "home" to mean the place we return to. The place where we can take off the armour, stop performing, stop producing, and simply be.</p>
+        <p>For most of us, that home is a building — an apartment, a house, a room. But there's a more fundamental home you carry with you everywhere, and it's the one reading these words right now. Your body. The lungs expanding as you breathe. The heart beating without being asked. The skin holding everything together.</p>
+        <p>You don't need to earn your way back to this home. You don't need to be more flexible, more fit, more disciplined. You just need to arrive. To place your attention inside your own skin and stay there for a moment.</p>
+        <p>That's the practice. That's the return. And it's available to you right now, in the next breath, without changing a single thing.</p>
+
+        <div class="blog-cta-block">
+            <p>Our body-focused sessions combine gentle movement, somatic awareness, and restorative practices to help you reconnect with the home you've always had.</p>
+            <a href="https://wa.me/35679252144" target="_blank" class="btn-cta-primary">Book a Session</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer-editorial">
+        <div class="container">
+            <div class="footer-grid-editorial">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">BeWell with Terry</a>
+                    <p>Nervous system reset — but make it human. In-person experiences in Malta.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="index.html#practice">Practice</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="index.html#training">Training</a></li>
+                        <li><a href="index.html#about">About Terry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://wa.me/35679252144" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/bewell_with_terry" target="_blank">Instagram</a></li>
+                        <li>Malta</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-editorial">
+                <p>&copy; 2026 BeWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

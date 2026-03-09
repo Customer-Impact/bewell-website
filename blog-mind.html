@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quietest Room | BeWell with Terry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            overflow: hidden;
+        }
+        .blog-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .blog-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(27,45,58,0.2) 0%, rgba(27,45,58,0.7) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 48px;
+        }
+        .blog-hero-text {
+            color: #fff;
+            max-width: 760px;
+        }
+        .blog-tag {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-primary-light);
+            margin-bottom: 12px;
+        }
+        .blog-hero-text h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+        .blog-meta {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .blog-body {
+            max-width: 720px;
+            margin: 64px auto;
+            padding: 0 24px;
+        }
+        .blog-body h2 {
+            font-size: 1.75rem;
+            color: var(--color-dark);
+            margin: 2.5rem 0 1rem;
+        }
+        .blog-body p {
+            font-size: 1.05rem;
+            color: var(--color-dark-light);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+        }
+        .blog-body em { font-style: italic; color: var(--color-dark); }
+        .blog-body strong { font-weight: 600; color: var(--color-dark); }
+        .blog-cta-block {
+            background: #e8f5f3;
+            border-left: 4px solid var(--color-primary);
+            padding: 24px 28px;
+            border-radius: 0 8px 8px 0;
+            margin: 3rem 0 0;
+        }
+        .blog-cta-block p {
+            margin: 0 0 16px;
+            color: var(--color-dark);
+            font-style: italic;
+        }
+        .blog-nav {
+            background: var(--color-bg);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--color-sand-dark);
+        }
+        .blog-nav .container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: var(--color-dark-light);
+        }
+        .blog-nav a { color: var(--color-primary); }
+        .blog-nav a:hover { text-decoration: underline; }
+        .blog-nav span { color: var(--color-dark-light); }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-wordmark">
+                    <span>BeWell</span>
+                    <span class="with-terry">with Terry</span>
+                </div>
+                <span class="logo-tagline">Breath · Cold · Body · Mind</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#practice">Practice</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html#training">Training</a></li>
+                <li><a href="https://wa.me/35679252144" target="_blank" class="nav-cta">Book a Session</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="blog-nav" style="margin-top:72px;">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <span>Mind</span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="blog-hero">
+        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=1400" alt="Mindfulness and meditation">
+        <div class="blog-hero-overlay">
+            <div class="container">
+                <div class="blog-hero-text">
+                    <span class="blog-tag">Mind</span>
+                    <h1>The Quietest Room: Finding Stillness in a Mind That Won't Stop Talking</h1>
+                    <p class="blog-meta">By Terry · 7 min read</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <article class="blog-body">
+        <p>Close your eyes for ten seconds and try to think about nothing.</p>
+        <p>How long did it take before a thought appeared? A second? Half a second? Most people never even make it to silence — the instruction itself becomes a thought, followed by another, followed by a judgment about the fact that you're thinking.</p>
+        <p>This is the mind. Brilliant, tireless, relentless. It evolved to plan, to predict, to protect. It scans for threats, replays conversations, rehearses futures, narrates your life in a running commentary you never asked for. And it's extraordinarily good at its job — so good, in fact, that most of us have come to believe we <em>are</em> our thoughts.</p>
+        <p>We're not.</p>
+        <p>And that single realisation — the space between you and the voice in your head — is where everything changes.</p>
+
+        <h2>The Overfull Mind</h2>
+        <p>There has never been a time in human history when the mind was asked to process this much. The average person encounters more information in a single day than someone in the fifteenth century encountered in an entire lifetime. Notifications, news cycles, social media, emails, advertisements, opinions, decisions — the input is constant, and there is no off switch.</p>
+        <p>The mind copes the only way it knows how: it speeds up. It multitasks. It keeps seventeen tabs open and wonders why it feels exhausted by noon. It mistakes busyness for productivity and worry for preparation. It learns to fill every pocket of silence — the queue at the supermarket, the pause before sleep, the first moments of waking — with more content, more stimulation, more noise.</p>
+        <p>And underneath all of that, there's a quieter signal. A tiredness that isn't physical. A sense of being full but never nourished. A longing for a moment of true rest — not sleep, but the waking rest of a mind that has stopped reaching for the next thing.</p>
+
+        <h2>Meditation Is Not What You Think</h2>
+        <p>When most people hear "meditation," they picture someone sitting cross-legged in complete serenity, thoughts dissolved, face perfectly composed. And then they try it, think about their grocery list within four seconds, and conclude they're bad at meditation.</p>
+        <p>Here's the truth: meditation is not the absence of thought. It's the practice of noticing thought without following it. It's the gap between a thought arising and you getting swept away in its story.</p>
+        <p>Imagine you're sitting by a river. Thoughts are the boats floating past. Meditation isn't about stopping the boats. It's about staying on the bank. You see a boat — <em>I need to reply to that email</em> — and instead of jumping aboard and sailing downstream into a twenty-minute anxiety spiral, you notice it, nod, and let it pass.</p>
+        <p>Some days, you'll jump on every boat. That's fine. The practice is the moment you realise you jumped, and you swim back to the bank. That's it. That's the whole thing. And every time you do it, you're training a muscle — the muscle of awareness — that gets stronger with use.</p>
+
+        <h2>The Mind-Body Conversation</h2>
+        <p>Here's something that surprised me when I started working with mindfulness practices: the mind doesn't exist in isolation. It's in constant conversation with the body.</p>
+        <p>Anxious thoughts produce a tight chest. A tight chest reinforces anxious thoughts. Rumination creates tension in the shoulders. Tension in the shoulders feeds rumination. The loop is seamless, and it runs so constantly that most of us can't tell where the thought ends and the sensation begins.</p>
+        <p>This is why the most powerful mind practices don't start with the mind. They start with the body. A slow exhale. A softening of the hands. Feeling the weight of your body in the chair. These aren't distractions from the "real" work of quieting the mind — they <em>are</em> the work. When the body settles, the mind has permission to follow.</p>
+        <p>This is also why breathwork and cold exposure complement mindfulness so powerfully. They give the mind something real and immediate to anchor to. Instead of fighting thoughts — which is itself a thought — you redirect attention to sensation. The breath. The cold. The heartbeat. Something undeniable and present.</p>
+
+        <h2>What Stillness Actually Feels Like</h2>
+        <p>People often ask what a "quiet mind" feels like, as if it's a destination they need to reach. In my experience, it's less a destination and more a texture. A quality of attention.</p>
+        <p>It feels like sitting in a room where the television was on so long you forgot it was there — and then someone turns it off. The silence isn't empty. It's full. Full of the sounds that were always there underneath: the wind, your breathing, the hum of being alive.</p>
+        <p>A quiet mind isn't a blank mind. It's a mind that has space. Space between the stimulus and the response. Space between the thought and the action. Space to choose, rather than react. Space to notice beauty you'd normally scroll past. Space to hear the answer to a question you'd been too busy to ask.</p>
+        <p>This doesn't require hours on a cushion. It can happen in thirty seconds at your kitchen table. It can happen mid-conversation, when you pause to actually listen instead of preparing your response. It can happen on a walk when you stop narrating the walk and simply walk.</p>
+
+        <h2>Small Practices, Profound Shifts</h2>
+        <p>You don't need to overhaul your life to begin a mindfulness practice. You need one minute and one decision: to pay attention on purpose.</p>
+        <p><strong>The single-breath reset.</strong> At any point in your day, take one breath with complete attention. Feel the air enter. Feel your ribs expand. Feel the pause at the top. Feel the release. One breath, fully experienced, is a complete meditation.</p>
+        <p><strong>The five senses check.</strong> When your mind is racing, name one thing you can see, one you can hear, one you can touch, one you can smell, one you can taste. This isn't a trick — it's a neurological redirect that pulls your attention from abstract thought into concrete, present reality.</p>
+        <p><strong>The do-nothing minute.</strong> Once a day, set a timer for sixty seconds and do absolutely nothing. Don't meditate. Don't breathe intentionally. Don't try to be mindful. Just sit and let yourself be a human being instead of a human doing. Notice what arises when you remove the pressure to improve, optimise, or transcend. Often, what arises is relief.</p>
+
+        <h2>Coming Home to the Mind</h2>
+        <p>We speak about the mind as if it's a problem to solve — too anxious, too scattered, too loud. But the mind isn't the enemy. It's a faithful instrument that's been running at full speed for years, trying to keep you safe and organised and ahead of the curve.</p>
+        <p>Coming home to the mind means the same thing as coming home to the body: not fixing it, but befriending it. Sitting with it. Listening to what it actually needs underneath all the noise — which, almost always, is simply permission to rest.</p>
+        <p>You don't need to become a different person. You don't need to be calmer, more disciplined, more "zen." You just need to create a small pocket of space in your day where the mind can set down what it's carrying and remember what it feels like to be light.</p>
+        <p>That space is always available. It's here right now, between these words. In the pause before your next thought.</p>
+        <p>Welcome home.</p>
+
+        <div class="blog-cta-block">
+            <p>Our mindfulness and meditation sessions are designed for real minds — busy, distracted, beautifully human ones. No experience necessary. Just a willingness to pause.</p>
+            <a href="https://wa.me/35679252144" target="_blank" class="btn-cta-primary">Book a Session</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer-editorial">
+        <div class="container">
+            <div class="footer-grid-editorial">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">BeWell with Terry</a>
+                    <p>Nervous system reset — but make it human. In-person experiences in Malta.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="index.html#practice">Practice</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="index.html#training">Training</a></li>
+                        <li><a href="index.html#about">About Terry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://wa.me/35679252144" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/bewell_with_terry" target="_blank">Instagram</a></li>
+                        <li>Malta</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-editorial">
+                <p>&copy; 2026 BeWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Breath You've Been Holding | BeWell with Terry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            overflow: hidden;
+        }
+        .blog-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .blog-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(27,45,58,0.2) 0%, rgba(27,45,58,0.7) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 48px;
+        }
+        .blog-hero-text {
+            color: #fff;
+            max-width: 760px;
+        }
+        .blog-tag {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-primary-light);
+            margin-bottom: 12px;
+        }
+        .blog-hero-text h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+        .blog-meta {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .blog-body {
+            max-width: 720px;
+            margin: 64px auto;
+            padding: 0 24px;
+        }
+        .blog-body h2 {
+            font-size: 1.75rem;
+            color: var(--color-dark);
+            margin: 2.5rem 0 1rem;
+        }
+        .blog-body p {
+            font-size: 1.05rem;
+            color: var(--color-dark-light);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+        }
+        .blog-body em {
+            font-style: italic;
+            color: var(--color-dark);
+        }
+        .blog-cta-block {
+            background: #e8f5f3;
+            border-left: 4px solid var(--color-primary);
+            padding: 24px 28px;
+            border-radius: 0 8px 8px 0;
+            margin: 3rem 0 0;
+        }
+        .blog-cta-block p {
+            margin: 0 0 16px;
+            color: var(--color-dark);
+            font-style: italic;
+        }
+        .blog-nav {
+            background: var(--color-bg);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--color-sand-dark);
+        }
+        .blog-nav .container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: var(--color-dark-light);
+        }
+        .blog-nav a {
+            color: var(--color-primary);
+        }
+        .blog-nav a:hover { text-decoration: underline; }
+        .blog-nav span { color: var(--color-dark-light); }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-wordmark">
+                    <span>BeWell</span>
+                    <span class="with-terry">with Terry</span>
+                </div>
+                <span class="logo-tagline">Breath · Cold · Body · Mind</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#practice">Practice</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html#training">Training</a></li>
+                <li><a href="https://wa.me/35679252144" target="_blank" class="nav-cta">Book a Session</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="blog-nav" style="margin-top:72px;">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <span>Breathwork</span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="blog-hero">
+        <img src="https://images.unsplash.com/photo-1474418397713-7ede21d49118?w=1400" alt="Breathwork practice">
+        <div class="blog-hero-overlay">
+            <div class="container">
+                <div class="blog-hero-text">
+                    <span class="blog-tag">Breathwork</span>
+                    <h1>The Breath You've Been Holding: Why Breathwork Is the Fastest Way Home to Yourself</h1>
+                    <p class="blog-meta">By Terry · 6 min read</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <article class="blog-body">
+        <p>You breathe roughly 20,000 times a day. And yet, most of those breaths happen without you noticing — shallow, quick, barely reaching past your chest. Somewhere between the morning alarm and the last scroll before sleep, your breath became something your body does <em>for</em> you rather than <em>with</em> you.</p>
+        <p>Breathwork is the practice of changing that.</p>
+        <p>It's not about breathing "correctly." It's about remembering that your breath is the one tool you always carry — the one doorway back to yourself that never closes.</p>
+
+        <h2>What Breathwork Actually Is</h2>
+        <p>At its simplest, breathwork is the conscious practice of controlling how you inhale, hold, and exhale. That's it. No equipment. No studio membership. No special clothing. Just you, your lungs, and a few minutes of attention.</p>
+        <p>But within that simplicity lives something remarkable. Different breathing patterns activate different branches of your nervous system. Slow, extended exhales tell your body it's safe. Rhythmic, connected breathing can release tension you didn't know you were carrying. Box breathing — inhale for four counts, hold for four, exhale for four, hold for four — can bring you from a state of overwhelm to a state of clarity in under three minutes.</p>
+        <p>This isn't mysticism. It's physiology. Your breath is the only autonomic function you can also control voluntarily. That makes it a bridge — between the unconscious and the conscious, between the body's automatic survival mode and your intentional, present self.</p>
+
+        <h2>Why We Forget to Breathe</h2>
+        <p>Modern life trains us to live in our heads. We plan, we worry, we rehearse conversations that haven't happened yet. The body becomes something we drag along to meetings, something we feed when it complains loudly enough, something we notice only when it breaks.</p>
+        <p>When stress becomes chronic, the breath tightens. Shoulders creep upward. The jaw clenches. The exhale shortens. Over time, this pattern becomes your normal — and you don't even realise how contracted you've become until something cracks open.</p>
+        <p>Breathwork is that crack.</p>
+        <p>Not because it fixes everything. But because it gives you three minutes, or ten, or twenty, where the only thing you need to do is feel the air moving through you. In that space, something shifts. The mind quiets — not because you forced it to, but because the body finally told it: <em>we're okay. We can rest now.</em></p>
+
+        <h2>What Happens in a Breathwork Session</h2>
+        <p>If you've never tried guided breathwork, here's what you might expect.</p>
+        <p>You lie down or sit comfortably. The practitioner guides you through a specific breathing pattern — it might be slow and meditative, or it might be more activated, with faster rhythms that move energy through the body. Music often accompanies the practice, not as background noise, but as a container for the experience.</p>
+        <p>Some people feel tingling in their hands. Some feel a wave of emotion rise and release — sometimes tears, sometimes laughter, sometimes just a deep, shaking sigh that seems to come from somewhere very old. Others feel profound stillness, as if the world paused and they finally caught up with themselves.</p>
+        <p>There is no "right" experience. There is only your experience.</p>
+        <p>What almost everyone reports afterward is the same: a feeling of spaciousness. As if the rooms inside you got bigger. As if you've been living in a house with all the windows closed, and someone finally opened one.</p>
+
+        <h2>The Science Behind the Shift</h2>
+        <p>When you change your breathing pattern, you directly influence your vagus nerve — the longest cranial nerve in your body, running from your brainstem to your gut. The vagus nerve is the master switch of your parasympathetic nervous system, the branch responsible for rest, digestion, and recovery.</p>
+        <p>Slow, deep breathing stimulates vagal tone. Higher vagal tone is associated with better emotional regulation, lower inflammation, improved heart rate variability, and a greater capacity to move between states of stress and calm without getting stuck in either one.</p>
+        <p>In other words, breathwork doesn't just make you feel better in the moment. Practiced regularly, it trains your nervous system to be more resilient. You don't stop encountering stress — but you stop being hijacked by it.</p>
+
+        <h2>Coming Home</h2>
+        <p>There's a reason the phrase "take a breath" is universal advice. We say it to children having tantrums, to friends in crisis, to ourselves before we walk into a difficult room. We already know, intuitively, that the breath is the reset button.</p>
+        <p>Breathwork simply takes that intuition and gives it structure, depth, and practice.</p>
+        <p>It's not about escaping your life. It's about arriving in it more fully. Feeling your feet on the ground. Noticing the temperature of the air as it enters your nostrils. Discovering that underneath the noise, underneath the to-do lists and the tension and the rushing — there is a version of you that is already calm. Already whole. Already home.</p>
+        <p>All it takes is one conscious breath to begin.</p>
+
+        <div class="blog-cta-block">
+            <p>Ready to experience breathwork for yourself? Explore upcoming sessions or reach out to learn which practice might be right for where you are right now.</p>
+            <a href="https://wa.me/35679252144" target="_blank" class="btn-cta-primary">Book a Session</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer-editorial">
+        <div class="container">
+            <div class="footer-grid-editorial">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">BeWell with Terry</a>
+                    <p>Nervous system reset — but make it human. In-person experiences in Malta.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="index.html#practice">Practice</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="index.html#training">Training</a></li>
+                        <li><a href="index.html#about">About Terry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://wa.me/35679252144" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/bewell_with_terry" target="_blank">Instagram</a></li>
+                        <li>Malta</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-editorial">
+                <p>&copy; 2026 BeWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

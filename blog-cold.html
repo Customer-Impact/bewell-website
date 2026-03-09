@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Into the Cold | BeWell with Terry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            overflow: hidden;
+        }
+        .blog-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+        .blog-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(27,45,58,0.2) 0%, rgba(27,45,58,0.7) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 48px;
+        }
+        .blog-hero-text {
+            color: #fff;
+            max-width: 760px;
+        }
+        .blog-tag {
+            display: inline-block;
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--color-primary-light);
+            margin-bottom: 12px;
+        }
+        .blog-hero-text h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+        .blog-meta {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+        }
+        .blog-body {
+            max-width: 720px;
+            margin: 64px auto;
+            padding: 0 24px;
+        }
+        .blog-body h2 {
+            font-size: 1.75rem;
+            color: var(--color-dark);
+            margin: 2.5rem 0 1rem;
+        }
+        .blog-body p {
+            font-size: 1.05rem;
+            color: var(--color-dark-light);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+        }
+        .blog-body em {
+            font-style: italic;
+            color: var(--color-dark);
+        }
+        .blog-cta-block {
+            background: #e8f5f3;
+            border-left: 4px solid var(--color-primary);
+            padding: 24px 28px;
+            border-radius: 0 8px 8px 0;
+            margin: 3rem 0 0;
+        }
+        .blog-cta-block p {
+            margin: 0 0 16px;
+            color: var(--color-dark);
+            font-style: italic;
+        }
+        .blog-nav {
+            background: var(--color-bg);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--color-sand-dark);
+        }
+        .blog-nav .container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: var(--color-dark-light);
+        }
+        .blog-nav a { color: var(--color-primary); }
+        .blog-nav a:hover { text-decoration: underline; }
+        .blog-nav span { color: var(--color-dark-light); }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-wordmark">
+                    <span>BeWell</span>
+                    <span class="with-terry">with Terry</span>
+                </div>
+                <span class="logo-tagline">Breath · Cold · Body · Mind</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#practice">Practice</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="index.html#training">Training</a></li>
+                <li><a href="https://wa.me/35679252144" target="_blank" class="nav-cta">Book a Session</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="blog-nav" style="margin-top:72px;">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>›</span>
+            <span>Cold</span>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="blog-hero">
+        <img src="cold.jpeg" alt="Ice bathing session">
+        <div class="blog-hero-overlay">
+            <div class="container">
+                <div class="blog-hero-text">
+                    <span class="blog-tag">Cold</span>
+                    <h1>Into the Cold: How Ice Bathing Teaches You to Be Still When Everything Screams Move</h1>
+                    <p class="blog-meta">By Terry · 7 min read</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <article class="blog-body">
+        <p>The water is cold. Not refreshing-swim-in-the-sea cold. Not forgot-to-turn-the-hot-tap cold. It's the kind of cold that makes every cell in your body light up at once. The kind that erases every thought except this one: <em>I am here. Right now. Completely.</em></p>
+        <p>That's the gift of cold water immersion. Not the toughness. Not the Instagram photo. The presence.</p>
+
+        <h2>Why Would Anyone Do This on Purpose?</h2>
+        <p>Let's be honest — the idea of sitting in ice water sounds like punishment, not wellness. And if the only reason to do it were discipline or bragging rights, most of us would rightly pass.</p>
+        <p>But something happens in those first seconds of cold that no meditation app, no journaling prompt, no amount of talking about "being present" can replicate. The cold doesn't ask you to be mindful. It demands it. Every distraction falls away — not gradually, but instantly. There is only the water, and the breath, and the extraordinary discovery that you can stay.</p>
+        <p>That discovery changes things. Not because cold water is magic. But because the moment you choose to remain calm inside discomfort, you learn something about yourself that you carry with you long after you've warmed up.</p>
+
+        <h2>What Cold Does to Your Body</h2>
+        <p>When cold water hits your skin, your body launches a cascade of survival responses. Blood vessels constrict, pulling blood toward your core to protect your vital organs. Your heart rate rises briefly. Norepinephrine — a neurotransmitter linked to focus, mood, and energy — floods your system. Adrenaline follows.</p>
+        <p>If you stay — and this is the important part — if you stay, and you breathe slowly, something shifts. Your nervous system, which initially screamed <em>danger</em>, begins to recalibrate. You're teaching it, in real time, that discomfort is not the same as threat. That you can be uncomfortable and safe simultaneously.</p>
+        <p>This is not a small lesson. For most of us, our nervous systems have learned to treat any discomfort — a difficult email, a social awkwardness, a moment of uncertainty — as a reason to flee, fight, or freeze. Cold exposure gently retrains that response. It widens the window of what you can tolerate without reacting.</p>
+        <p>Over time, regular cold immersion has been associated with reduced inflammation, improved circulation, better mood regulation, enhanced immune function, and deeper sleep. But the physical benefits are almost secondary to the psychological one: the quiet confidence that comes from knowing you can meet a hard moment and not run.</p>
+
+        <h2>The Practice of Surrender</h2>
+        <p>Here's what most people get wrong about ice bathing: they think the goal is to endure. To grit your teeth, clench your fists, and power through.</p>
+        <p>It's the opposite.</p>
+        <p>The practice of cold water is a practice of surrender. You step in, and the urge to tense every muscle is overwhelming. But tension makes the cold feel worse. The body that fights the water suffers more than the body that softens into it.</p>
+        <p>So you learn — breath by breath — to relax your hands. Unclench your jaw. Let your shoulders drop. You find a slow, steady exhale. And in that exhale, something remarkable happens: the cold is still cold, but it no longer controls you. You're in it, and you're okay.</p>
+        <p>This is a metaphor for so much of life. How often do we clench against things we cannot change? How much energy goes into resisting what is already here? The cold teaches you, viscerally and undeniably, that softening is not weakness. It's the most powerful thing you can do.</p>
+
+        <h2>Your First Time</h2>
+        <p>If you've never tried cold water immersion, here's what to expect.</p>
+        <p>The first ten seconds are the hardest. Your breath will want to gasp — short, sharp, panicked inhales. This is the cold shock response, and it's completely normal. Your one job in those first seconds is to slow the exhale. Not to stop the reaction, but to ride it.</p>
+        <p>After about thirty seconds to a minute, something changes. The initial shock fades into a steady, intense sensation. It's still cold. It's still uncomfortable. But it becomes manageable. Your breathing evens out. Your mind clears. Some people describe it as a buzzing stillness — like the volume of the world turned down and all that's left is the hum of being alive.</p>
+        <p>You don't need to stay for long. Two minutes is plenty for a beginner. The point is not duration — it's the quality of presence you bring to the time you're in.</p>
+        <p>When you step out, the warmth that floods back into your body is unlike anything else. It's not just physical warmth — it's a full-body sense of aliveness, of vitality, as if every nerve ending woke up at once and said <em>thank you</em>.</p>
+
+        <h2>Cold as a Daily Reset</h2>
+        <p>You don't need an ice bath to practice cold exposure. A cold shower — even just thirty seconds of cold water at the end of your regular shower — is enough to begin.</p>
+        <p>What matters is the intention. Not cold for punishment. Not cold for performance. Cold as a daily invitation to step out of autopilot and into the raw, unfiltered experience of being in a body. Cold as a three-minute practice of choosing presence over comfort. Cold as a reminder that you are more resilient than your mind tells you.</p>
+
+        <h2>Coming Home to the Body</h2>
+        <p>We spend so much of our lives trying to be comfortable. And comfort is beautiful — it's rest, it's safety, it's nourishment. But when comfort becomes avoidance, when we numb ourselves so thoroughly that we can't feel the cold or the heat or the ache or the joy, we lose contact with the one home we've had since birth: the body.</p>
+        <p>Cold water immersion is a homecoming. A sharp, breathtaking, utterly alive homecoming.</p>
+        <p>It says: <em>You are here. You can feel this. You are not too fragile for the full spectrum of being human.</em></p>
+        <p>And once you know that — once you've felt it in your bones, literally — you walk through the rest of your day a little differently. A little more grounded. A little more willing to stay when things get hard. A little more at home in your own skin.</p>
+
+        <div class="blog-cta-block">
+            <p>Curious about cold water practice? Our guided sessions create a safe, supported space for your first plunge — or your hundredth. Come as you are.</p>
+            <a href="https://wa.me/35679252144" target="_blank" class="btn-cta-primary">Book a Session</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer-editorial">
+        <div class="container">
+            <div class="footer-grid-editorial">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">BeWell with Terry</a>
+                    <p>Nervous system reset — but make it human. In-person experiences in Malta.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="index.html#practice">Practice</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="index.html#training">Training</a></li>
+                        <li><a href="index.html#about">About Terry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="https://wa.me/35679252144" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/bewell_with_terry" target="_blank">Instagram</a></li>
+                        <li>Malta</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-editorial">
+                <p>&copy; 2026 BeWell. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
